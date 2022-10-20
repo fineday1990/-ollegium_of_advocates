@@ -1,0 +1,32 @@
+.lawers
+    background-color: $color-dark-light
+    padding: 3rem 0
+    &__container
+        display: flex
+        flex-direction: column
+        h2
+            text-align: center
+            margin-bottom: 3rem
+    &__card
+        background-color: $color-gold
+        border-radius: 0.5rem
+        padding: 2rem 2rem 2rem 4rem
+        display: flex
+        flex-direction: row
+        align-items: center
+        transition: all .2s
+        backface-visibility: hidden
+        &:not(:last-child)
+            margin-bottom: 2rem
+        &:hover
+            transform: scale(1.04)
+    &__foto
+        width: 20rem
+        height: 20rem
+        margin-right: 2rem
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__name
+        margin-bottom: 1.5rem

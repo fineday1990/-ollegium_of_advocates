@@ -1,0 +1,43 @@
+.header
+    background: $color-dark
+    min-height: 10rem
+    padding: 1rem 2rem
+    &__container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__left-box
+        display: flex
+        flex-direction: row
+        align-items: center
+        .logo
+            margin-right: 2rem
+    &__right-box
+        display: flex
+        flex-direction: row
+
+.nav__list
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+.nav__item
+    &:not(:last-child)
+        margin-right: 7rem
+.nav__link
+    &:link, &:visited
+        text-decoration: none
+        font-size: 1.8rem
+        font-weight: 700
+        color: $color-gold
+        text-align: center
+        transition: .2s all
+        display: inline-block
+
+    &:hover
+        color: $color-gold-light
+        transform: scale(1.1) translateY(-.2rem)
+    &:active
+        color: $color-gold
+        transform: scale(1) translateY(.2rem)
