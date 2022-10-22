@@ -1,19 +1,46 @@
 .cards
     background: $color-dark
-    padding: 4rem 0
+    padding: 4rem 2rem
     &__container
         display: grid
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
-        grid-gap: 5rem
+        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr))
+        grid-gap: 4rem
+        @include respond(tab-land)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 3rem
+        @include respond(phone)
+            grid-gap: 2rem
+
     &__card
         background: $color-gold
         border-radius: 0.5rem
         text-align: center
         padding: 1rem
         transition: 0.2s all
-
+        &_1
+            @include respond(tab-land)
+                grid-column: 1/2
+            @include respond(phone)
+                grid-column: 1/-1
+        &_2
+            @include respond(tab-land)
+                grid-column: 2/-1
+            @include respond(phone)
+                grid-column: 1/-1
+        &_3
+            @include respond(tab-land)
+                grid-column: 1/2
+            @include respond(phone)
+                grid-column: 1/-1
+        &_4
+            @include respond(tab-land)
+                grid-column: 2/-1
+            @include respond(phone)
+                grid-column: 1/-1
         &:hover
             transform: scale(1.1)
+            @include respond(phone)
+                transform: scale(1.05)
 .card
     &-icon
         margin-bottom: 1.8rem

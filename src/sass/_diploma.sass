@@ -4,9 +4,16 @@
     background-size: cover
     padding-top: 4rem
     padding-bottom: 4rem
+    @include respond(tab-port)
+        padding-top: 2rem
+        padding-bottom: 2rem
+    @include respond(phone)
+        display: none
     h2
         text-align: center
         margin-bottom: 3rem
+        @include respond(tab-port)
+            margin-bottom: 2rem
     &__img
         height: 60rem
         object-fit: contain

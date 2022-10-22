@@ -10,6 +10,36 @@
         />
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/style.min.css" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="icons/favicons/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="icons/favicons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="icons/favicons/favicon-16x16.png"
+        />
+        <link rel="manifest" href="icons/favicons/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="icons/favicons/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <link rel="shortcut icon" href="icons/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#603cba" />
+        <meta
+            name="msapplication-config"
+            content="icons/favicons/browserconfig.xml"
+        />
+        <meta name="theme-color" content="#2f2727" />
         <title>Коллегия Адвокатов "Специализированная"</title>
     </head>
     <body>
@@ -27,7 +57,7 @@
                     </div>
                 </div>
                 <div class="header__right-box">
-                    <ul class="nav__list">
+                    <ul class="nav__list hide">
                         <li class="nav__item">
                             <a
                                 href="https://vk.com/advokaty21"
@@ -36,7 +66,7 @@
                             /></a>
                         </li>
                         <li class="nav__item">
-                            <a href="index.html" class="nav__link">Главная</a>
+                            <a href="#" class="nav__link">Главная</a>
                         </li>
                         <li class="nav__item">
                             <a href="servicesheet.html" class="nav__link"
@@ -44,9 +74,45 @@
                             >
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Контакты</a>
+                            <a href="contact.html" class="nav__link"
+                                >Контакты</a
+                            >
                         </li>
                     </ul>
+                    <div class="navigation">
+                        <input
+                            type="checkbox"
+                            class="navigation__toggle"
+                            id="navi-toggle"
+                        />
+                        <label for="navi-toggle" class="navigation__button"
+                            ><span class="navigation__icon"></span
+                        ></label>
+                        <div class="navigation__background"></div>
+                        <nav class="navigation__nav">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a href="#" class="navigation__link"
+                                        >Главная</a
+                                    >
+                                </li>
+                                <li class="navigation__item">
+                                    <a
+                                        href="servicesheet.html"
+                                        class="navigation__link"
+                                        >Услуги</a
+                                    >
+                                </li>
+                                <li class="navigation__item">
+                                    <a
+                                        href="contact.html"
+                                        class="navigation__link"
+                                        >Контакты</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </section>
@@ -66,7 +132,7 @@
         </section>
         <section class="cards">
             <div class="cards__container container">
-                <div class="cards__card">
+                <div class="cards__card cards__card_1">
                     <img class="card-icon" src="icons/key.svg" alt="key" />
                     <h2 class="card-title title-2">
                         Доступность юридической помощи.
@@ -77,7 +143,7 @@
                         помощи для доверителей.
                     </p>
                 </div>
-                <div class="cards__card">
+                <div class="cards__card cards__card_2">
                     <img class="card-icon" src="icons/user.svg" alt="user" />
                     <h2 class="card-title title-2">
                         Профессионализм наших адвокатов.
@@ -88,7 +154,7 @@
                         компетенциями в области оказания юридической помощи.
                     </p>
                 </div>
-                <div class="cards__card">
+                <div class="cards__card cards__card_3">
                     <img class="card-icon" src="icons/check.svg" alt="check" />
                     <h2 class="card-title title-2">Юридический опыт.</h2>
                     <p class="card-text">
@@ -97,7 +163,7 @@
                         обвиняемых на всех стадиях уголовного дела с 2011 года
                     </p>
                 </div>
-                <div class="cards__card">
+                <div class="cards__card cards__card_4">
                     <img class="card-icon" src="icons/lock.svg" alt="lock" />
                     <h2 class="card-title title-2">Адвокатская тайна.</h2>
                     <p class="card-text">
@@ -122,14 +188,13 @@
                         <h3 class="lawers__name">Щетков Вадим Александрович</h3>
                         <p class="lawers__text">
                             Председатель(руководитель) коллегии адвокатов
-                            «Специализированная» Чувашской Республики
+                            «Специализированная» Чувашской Республики.
                             Действующий адвокат Стаж работы более 30 лет.
                             Возглавляет коллегию адвокатов «Специализированная»
                             с 2011 года.
                         </p>
                     </div>
                 </div>
-
                 <div class="lawers__card">
                     <img
                         src="img/persone-2.png"
@@ -140,24 +205,31 @@
                         <h3 class="lawers__name">Борисов Павел Игоревич</h3>
                         <p class="lawers__text">
                             Член коллегии адвокатов «Специализированная»
-                            Чувашской Республики Действующий адвокат Стаж работы
-                            7 лет. Направления по оказываемым услугам: адвокат
-                            по уголовным делам и семейным спорам. -оказывает
-                            квалифицированную юридическую по защите прав
-                            подозреваемых, обвиняемых, подсудимых и осужденных
-                            на всех стадия уголовного процесса; -представляет
-                            интересы граждан и юридических лиц по имущественным
-                            спорам в порядке гражданского судопроизводства с
-                            момента подготовки искового заявления и досудебного
-                            урегулирования до взыскания по исполнительному
-                            производству; - ведет дела о расторжении брака
-                            (разводе), разделе совместно нажитого имущества,
-                            определении места жительства детей, взыскании
-                            алиментов, установлении отцовства, лишении
-                            родительских прав и порядка общения с детьми. <br />
-                            Тел.: +7(987) 669-32-57 <br />
-                            Эл. почта: 656@advokpalata-21.ru <br />
-                            Telegram @advokatBorisov656
+                            Чувашской Республики. Действующий адвокат. Стаж
+                            работы более 7 лет. Направления по оказываемым
+                            услугам: адвокат по уголовным делам и семейным
+                            спорам.
+                            <span class="hide-text">
+                                -оказывает квалифицированную юридическую по
+                                защите прав подозреваемых, обвиняемых,
+                                подсудимых и осужденных на всех стадия
+                                уголовного процесса; -представляет интересы
+                                граждан и юридических лиц по имущественным
+                                спорам в порядке гражданского судопроизводства с
+                                момента подготовки искового заявления и
+                                досудебного урегулирования до взыскания по
+                                исполнительному производству; - ведет дела о
+                                расторжении брака (разводе), разделе совместно
+                                нажитого имущества, определении места жительства
+                                детей, взыскании алиментов, установлении
+                                отцовства, лишении родительских прав и порядка
+                                общения с детьми. </span
+                            ><br />
+                            <span class="fatty">
+                                Тел.: +7(987) 669-32-57 <br />
+                                Эл. почта: 656@advokpalata-21.ru <br />
+                                Telegram @advokatBorisov656</span
+                            >
                         </p>
                     </div>
                 </div>
@@ -174,21 +246,26 @@
                         </h3>
                         <p class="lawers__text">
                             Член коллегии адвокатов «Специализированная»
-                            Чувашской Республики Действующий адвокат Стаж работы
-                            7 лет Направления по оказываемым услугам: узкая
-                            специализация по праву интеллектуальной
-                            собственности (регистрация товарных знаков, защита
-                            прав авторов и прочее). - досудебное урегулирование
-                            споров, претензионная работа; - представительство в
-                            арбитражных судах и судах общей юрисдикции; - защита
-                            по уголовным делам и административным делам; -
-                            консультирование по гражданско-правовым,
-                            административно-правовым, уголовно-правовым
-                            вопросам; - защита прав потребителей; - семейные
-                            споры (развод‚ раздел имущества‚ брачный договор‚
-                            алименты); <br />
-                            Тел.: + 7(952)313-50-42 <br />
-                            Telegram @ostropolskiy
+                            Чувашской Республики. Действующий адвокат. Стаж
+                            работы более 7 лет. Направления по оказываемым
+                            услугам: узкая специализация по праву
+                            интеллектуальной собственности (регистрация товарных
+                            знаков, защита прав авторов и прочее).
+                            <span class="hide-text">
+                                - досудебное урегулирование споров,
+                                претензионная работа; - представительство в
+                                арбитражных судах и судах общей юрисдикции; -
+                                защита по уголовным делам и административным
+                                делам; - консультирование по
+                                гражданско-правовым, административно-правовым,
+                                уголовно-правовым вопросам; - защита прав
+                                потребителей; - семейные споры (развод‚ раздел
+                                имущества‚ алименты); </span
+                            ><br />
+                            <span class="fatty">
+                                Тел.: + 7(952)313-50-42 <br />
+                                Telegram @ostropolskiy</span
+                            >
                         </p>
                     </div>
                 </div>
@@ -203,21 +280,27 @@
                         <h3 class="lawers__name">Скворцов Артур Бариевич</h3>
                         <p class="lawers__text">
                             Член коллегии адвокатов «Специализированная»
-                            Чувашской Республики Действующий адвокат Стаж работы
-                            более 4 лет. Направления по оказываемым услугам:
-                            адвокат по уголовным делам и защите прав
-                            потребителей. - имеет опыт работы в
-                            правоохранительных органах, хорошо знаком с её
-                            структурой и функцией; -специализируется в спорах по
-                            защите прав потребителей с страховыми организациями,
-                            застройщиками и подрядчиками, с медицинскими
-                            организациями; - ведет частную практику по
-                            гражданским делам и уголовным делам в области
-                            экономических преступлений; -осуществляет сбор
-                            доказательств для обращения в государственные
-                            органы. <br />
-                            Тел.: +7(937)370-96-87 <br />
-                            Эл. почта: skvortsovartur@yandex.ru
+                            Чувашской Республики Действующий адвокат. Стаж
+                            работы более 4 лет. Направления по оказываемым
+                            услугам: адвокат по уголовным делам и защите прав
+                            потребителей.
+                            <span class="hide-text">
+                                - имеет опыт работы в правоохранительных
+                                органах, хорошо знаком с её структурой и
+                                функцией; -специализируется в спорах по защите
+                                прав потребителей с страховыми организациями,
+                                застройщиками и подрядчиками, с медицинскими
+                                организациями; - ведет частную практику по
+                                гражданским делам и уголовным делам в области
+                                экономических преступлений; -осуществляет сбор
+                                доказательств для обращения в государственные
+                                органы.</span
+                            >
+                            <br />
+                            <span class="fatty">
+                                Тел.: +7(937)370-96-87 <br />
+                                Эл. почта: skvortsovartur@yandex.ru</span
+                            >
                         </p>
                     </div>
                 </div>
@@ -402,11 +485,12 @@
                 </div>
                 <!-- форма -->
                 <div class="contacts__form">
-                    <form action="#" class="form">
+                    <form action="#" class="form" id="tg">
                         <h3 class="title-form title-3">Отправить сообщение</h3>
                         <div class="form__group">
                             <input
                                 type="text"
+                                name="name"
                                 class="form__input"
                                 placeholder="Ваше имя"
                                 id="name"
@@ -419,6 +503,7 @@
                         <div class="form__group">
                             <input
                                 type="tel"
+                                name="tel"
                                 class="form__input"
                                 placeholder="Ваш номер телефона"
                                 id="tel"
@@ -447,7 +532,9 @@
                                     checked
                                     type="checkbox"
                                     name="agreement"
-                                    class="checkbox__input _req"
+                                    class="checkbox__input"
+                                    onchange="document.getElementById('submit').disabled
+                                = !this.checked;"
                                 />
                                 <label
                                     for="formAgreement"
@@ -460,7 +547,15 @@
                             </div>
                         </div>
                         <div class="form__group">
-                            <button class="btn-form">ОТПРАВИТЬ</button>
+                            <button
+                                type="submit"
+                                disabled="disabled"
+                                name="submit"
+                                id="submit"
+                                class="btn-form"
+                            >
+                                ОТПРАВИТЬ
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -475,25 +570,27 @@
                 />
             </div>
             <div class="container">
-                <ul class="nav__list">
+                <ul class="nav__list nav__list_column nav nav-pills">
                     <li class="nav__item">
                         <a href="https://vk.com/advokaty21" class="nav__link"
                             ><img src="icons/vk.svg" alt="vk"
                         /></a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Главная</a>
+                        <a href="#" class="nav__link active">Главная</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Услуги</a>
+                        <a href="servicesheet.html" class="nav__link">Услуги</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Контакты</a>
+                        <a href="contact.html" class="nav__link">Контакты</a>
                     </li>
                 </ul>
             </div>
         </footer>
 
         <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

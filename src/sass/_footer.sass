@@ -1,6 +1,8 @@
 .footer
     background: $color-dark
     padding: 8rem 0
+    @include respond(tab-port)
+        padding: 4rem 0
     &__logo
         display: flex
         justify-content: center
@@ -8,3 +10,8 @@
         margin-bottom: 5rem
     &__logo_img
         height: 15.3rem
+
+.nav__list_column
+    @include respond(phone)
+        flex-direction: column
+        padding-left: 0

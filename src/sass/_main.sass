@@ -2,12 +2,21 @@
     background-color: $color-dark-light
     display: grid
     grid-template-columns: 1fr 1fr
-
+    @include respond(tab-port)
+        grid-template-rows: 1fr 2fr
+    &__title-1
+        @include respond(phone)
+            font-size: 2.8rem
     &__left-box
         grid-column: 1/2
         display: flex
         justify-content: center
         align-items: center
+        @include respond(tab-port)
+            grid-column: 1/-1
+        @include respond(phone)
+            min-height: 50rem
+            grid-row: 1/-1
         h1
             border-left: 0.3rem solid $color-gold
             padding-left: 2rem
@@ -15,13 +24,22 @@
             animation-duration: 2s
             animation-delay: 1s
             animation-timing-function: ease-in-out
+
     &__right-box
         grid-column: 2/-1
         overflow: hidden
+        @include respond(tab-port)
+            grid-column: 1/-1
         img
             height: 69rem
             width: 100%
             object-fit: cover
+            @include respond(tab-land)
+                height: 52rem
+            @include respond(tab-port)
+                height: 60rem
+            @include respond(phone)
+                display: none
 
 @keyframes lowToHight
     0%

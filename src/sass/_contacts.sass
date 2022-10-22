@@ -4,10 +4,18 @@
     &__container
         display: flex
         flex-direction: row
-
+        @include respond(tab-port)
+            flex-direction: column
+            padding: 2rem 2rem
+        @include respond(phone)
+            padding: 2rem 1rem
     &__title
         margin-bottom: 1.4rem
         text-align: center
+    &__address
+        @include respond(tab-port)
+            margin-bottom: 2rem
+
 .phone
     a
         text-decoration: none
@@ -20,17 +28,22 @@
 
 .form
     padding-left: 5rem
+    @include respond(tab-port)
+        padding-left: 0
+
     &__group:not(:last-child)
-        margin-bottom: 1rem
-    &__group:nth-child(4)
+        max-height: 7rem
         margin-bottom: 2rem
+    &__group:nth-child(4)
+        margin-bottom: 7rem
     &__label
         letter-spacing: .2rem
         font-weight: 400
         display: block
-        margin-top: 1rem
+        margin-top: .4rem
         margin-left: 1.5em
         transition: 0.3s all
+        color: $color-gold
 
     &__input
         letter-spacing: .2rem
@@ -42,7 +55,8 @@
         border-bottom: .3rem solid transparent
         border-radius: .5rem
         width: 100%
-
+        @include respond(tab-port)
+            width: 100%
         &:focus
             outline: none
             border-right: .5rem solid $color-gold
@@ -126,3 +140,32 @@
         background-color: $color-dark
         border-radius: 5rem
         transform: scale(0)
+.maps
+    padding-top: 3rem
+    &__box
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        &-one
+            margin-bottom: 1rem
+    &__title
+        text-align: center
+        margin-bottom: 2rem
+@include respond(tab-port)
+    iframe
+        width: 50rem
+@include respond(phone)
+    iframe
+        width: 26rem
+
+.form__group-text-label
+    font-size: 1.4rem
+    font-weight: 500
+
+.dark-fon
+    background: none
+    background-color: $color-dark-light!important
+
+.color-gold
+    color: $color-gold!important

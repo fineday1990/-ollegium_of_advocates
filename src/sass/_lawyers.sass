@@ -1,12 +1,18 @@
 .lawers
-    background-color: $color-dark-light
-    padding: 3rem 0
+    background-color: $color-dark
+    padding: 0rem 2rem 3rem 2rem
+    @include respond(tab-land)
+        padding: 0rem 2rem 2rem 2rem
+    @include respond(tab-port)
+        padding: 1rem 2rem
     &__container
         display: flex
         flex-direction: column
         h2
             text-align: center
             margin-bottom: 3rem
+            @include respond(tab-port)
+                margin-bottom: 1rem
     &__card
         background-color: $color-gold
         border-radius: 0.5rem
@@ -20,13 +26,27 @@
             margin-bottom: 2rem
         &:hover
             transform: scale(1.04)
+        @include respond(tab-port)
+            flex-direction: column
+            padding: 1rem
+            margin-bottom: 2rem
     &__foto
         width: 20rem
         height: 20rem
         margin-right: 2rem
+        @include respond(tab-port)
+            margin-bottom: 1.6rem
+            margin-right: 0
+            width: 15rem
+            height: 15rem
     &__content
         display: flex
         flex-direction: column
         justify-content: center
     &__name
         margin-bottom: 1.5rem
+        @include respond(tab-port)
+            text-align: center
+    &__text
+        @include respond(tab-port)
+            text-align: center
